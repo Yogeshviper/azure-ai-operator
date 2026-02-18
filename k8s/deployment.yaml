@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: azure-operator
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+      app: azure-operator
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: azure-operator
+
+    spec:
+
+      containers:
+
+        - name: azure-operator
+
+          image: demoprojaiopsacr.azurecr.io/azure-operator:v1
+
+          ports:
+
+            - containerPort: 8000
+
+          envFrom:
+
+            - secretRef:
+
+                name: azure-operator-secret
+

@@ -1,0 +1,53 @@
+[project]
+
+name = "agent-end-to-end"
+
+version = "0.1.0"
+
+description = "end-to-end implementation of an agentic application"
+
+authors = [
+
+  { name="Vikas Gautam", email="vikas.gautam18@gmail.com" },
+
+  { name="Shweta Kamath", email="shwetkmth@gmail.com" }
+
+]
+
+readme = "README.md"
+
+requires-python = ">=3.11,<3.14"
+
+license = "MIT"
+
+
+dependencies = [
+
+  "semantic-kernel==1.37.0",
+
+  "langfuse>=3.6.1,<4.0.0",
+
+  "openlit>=1.35.5,<2.0.0",
+
+  "chainlit>=2.8.3,<3.0.0",
+
+  "agent-framework>=1.0.0b251007,<2.0.0",
+
+  "python-dotenv>=1.1.1,<2.0.0",
+
+  "av<14.0.0"
+
+]
+
+
+[build-system]
+
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+
+package-mode = false
+
