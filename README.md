@@ -21,7 +21,7 @@ This project combines:
 Users provide structured prompts such as:
 
 Create VM  
-Name: bot-win-server  
+Name: test-server  
 Resource Group: demo-rg  
 Location: centralindia  
 OS: Windows
