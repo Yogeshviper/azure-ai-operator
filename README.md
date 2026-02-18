@@ -63,6 +63,7 @@ User Prompt
 → Azure Resource Deployment
 
 ## 📂 Project Structure
+```bash
 azure-ai-operator/
 │
 ├── src/
@@ -74,6 +75,7 @@ azure-ai-operator/
 └── k8s/
     ├── deployment.yaml
     ├── service.yaml
+```
 
 ## ⚙️ Prerequisites
 
@@ -92,6 +94,7 @@ Service Principal or Managed Identity configured
 ## 🔐 Environment Variables (.env)
 
 Create a .env file:
+```bash
 
 AZURE_SUBSCRIPTION_ID=your_subscription_id
 AZURE_TENANT_ID=your_tenant_id
@@ -102,6 +105,7 @@ AZURE_OPENAI_ENDPOINT=https://your-openai-resource.openai.azure.com/
 AZURE_OPENAI_API_KEY=your_openai_key
 AZURE_OPENAI_DEPLOYMENT=gpt-4.1-mini
 AZURE_OPENAI_API_VERSION=2024-02-15-preview
+```
 
 ## 🛠 Implementation Steps
 ### 1️⃣ Clone Repository
