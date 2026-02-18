@@ -1,10 +1,10 @@
-🚀 Azure AI Cloud Operator
+# 🚀 Azure AI Cloud Operator
 
 An AI-assisted Azure Infrastructure Automation project that deploys Azure resources from structured prompts using Azure SDK and Azure OpenAI.
 
 This project allows users to provision Azure resources like Virtual Machines, Resource Groups, and Storage Accounts through a conversational interface powered by Chainlit.
 
-📌 Project Overview
+## 📌 Project Overview
 
 This project combines:
 
@@ -53,7 +53,7 @@ Public IP
 
 Network Interface
 
-🧠 Architecture Flow
+## 🧠 Architecture Flow
 
 User Prompt
 → Chainlit UI
@@ -62,7 +62,7 @@ User Prompt
 → Azure SDK
 → Azure Resource Deployment
 
-📂 Project Structure
+## 📂 Project Structure
 azure-ai-operator/
 │
 ├── src/
@@ -75,7 +75,7 @@ azure-ai-operator/
     ├── deployment.yaml
     ├── service.yaml
 
-⚙️ Prerequisites
+## ⚙️ Prerequisites
 
 Before starting, ensure:
 
@@ -89,7 +89,7 @@ Azure Container Registry (ACR)
 
 Service Principal or Managed Identity configured
 
-🔐 Environment Variables (.env)
+## 🔐 Environment Variables (.env)
 
 Create a .env file:
 
@@ -103,37 +103,45 @@ AZURE_OPENAI_API_KEY=your_openai_key
 AZURE_OPENAI_DEPLOYMENT=gpt-4.1-mini
 AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
-🛠 Implementation Steps
-1️⃣ Clone Repository
+## 🛠 Implementation Steps
+### 1️⃣ Clone Repository
+```bash
 git clone <your-repo-url>
 cd azure-ai-operator
+```
 
-2️⃣ Install Dependencies (Local Testing)
+### 2️⃣ Install Dependencies (Local Testing)
+```bash
 pip install -r requirements.txt
 chainlit run src/chainlit_app.py
+```
 
-3️⃣ Build Docker Image
+### 3️⃣ Build Docker Image
+```bash
 az acr build \
   --registry <your-acr-name> \
   --image azure-operator:v1 \
+```
   .
 
-4️⃣ Create Kubernetes Secret
+### 4️⃣ Create Kubernetes Secret
+```bash
 kubectl create secret generic azure-env \
   --from-env-file=.env
+```
 
-5️⃣ Deploy to AKS
+### 5️⃣ Deploy to AKS
+```bash
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
+```
 
-6️⃣ Access Application
+### 6️⃣ Access Application
+```bash
 kubectl get svc
+```
 
 
-Use LoadBalancer IP to access Chainlit UI.
+# Use LoadBalancer IP to access Chainlit UI.
 
-💬 Supported Commands (Structured Format)
-Create Resource Group
-Create Resource Group
-Name: demo-rg
-Location: centralindia
+
